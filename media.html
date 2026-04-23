@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFA | Media</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .purple-main { color: #8B5CF6; }
+        .bg-purple-main { background-color: #8B5CF6; }
+        .bg-purple-dark { background-color: #6D28D9; }
+        .video-overlay { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- NAVIGATION -->
+    <nav class="flex items-center justify-between px-8 py-4 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-purple-main rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-xs">DFA</span>
+            </div>
+            <span class="font-bold text-xl tracking-tight">DFA</span>
+        </div>
+        <div class="hidden md:flex gap-8 font-medium text-sm">
+            <a href="home.html" class="hover:purple-main transition">Home</a>
+            <a href="media.html" class="purple-main">Media</a>
+            <a href="event.html" class="hover:purple-main transition">Events</a>
+            <a href="#" class="hover:purple-main transition">Contact</a>
+        </div>
+        <button class="bg-purple-main text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+            Get Tickets →
+        </button>
+    </nav>
+
+    <!-- MEDIA HERO -->
+    <section class="relative h-[60vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="image/DAF TV-12.jpg" alt="Media Hero" class="w-full h-full object-cover brightness-50">
+        </div>
+        <div class="container mx-auto px-8 relative z-10 text-white">
+            <h1 class="text-5xl font-bold leading-tight mb-4">Watch Our<br>Conversations</h1>
+            <p class="max-w-md text-gray-200">Real stories, honest questions, and faith that hits different. This is DFA media.</p>
+        </div>
+    </section>
+
+    <!-- FEATURED VIDEO -->
+    <section class="py-20 container mx-auto px-8">
+        <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 flex flex-col md:flex-row items-center gap-8 p-6 shadow-sm">
+            <div class="w-full md:w-1/2 relative group cursor-pointer">
+                <img src="image/DAF TV-7.jpg" class="w-full h-80 object-cover rounded-2xl">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 bg-purple-main text-white rounded-full flex items-center justify-center pl-1 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-play text-2xl"></i>
+                    </div>
+                </div>
+                <span class="absolute bottom-4 left-4 bg-purple-main text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Watch Series</span>
+            </div>
+            <div class="w-full md:w-1/2">
+                <span class="purple-main font-bold uppercase tracking-widest text-xs">New Series</span>
+                <h2 class="text-3xl font-bold mt-2 mb-4">Does God Really Exist? — Street Answers</h2>
+                <p class="text-gray-500 mb-6">We take to the streets of Lagos to ask one of life's biggest questions. The answers might surprise you.</p>
+                <div class="flex gap-6 text-sm text-gray-400">
+                    <span><i class="fa-solid fa-eye mr-2"></i>12k views</span>
+                    <span><i class="fa-regular fa-clock mr-2"></i>15:20</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL VIDEOS SECTION -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-12">
+                <span class="purple-main font-bold uppercase tracking-widest text-xs">Browse Library</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4">All Videos</h2>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 mt-8">
+                    <button class="bg-purple-main text-white px-6 py-2 rounded-full text-sm font-medium">All</button>
+                    <button class="bg-white text-gray-600 border border-gray-200 px-6 py-2 rounded-full text-sm font-medium hover:border-purple-main transition">Street Interviews</button>
+                    <button class="bg-white text-gray-600 border border-gray-200 px-6 py-2 rounded-full text-sm font-medium hover:border-purple-main transition">Teachings</button>
+                    <button class="bg-white text-gray-600 border border-gray-200 px-6 py-2 rounded-full text-sm font-medium hover:border-purple-main transition">Reflections</button>
+                    <button class="bg-white text-gray-600 border border-gray-200 px-6 py-2 rounded-full text-sm font-medium hover:border-purple-main transition">Documentary</button>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Video Item Template (8 items as per screenshot) -->
+<script>
+const videos = [
+    { title: "Does God Really Exist?", tag: "Street Interviews", color: "bg-purple-main", image: src="image/DAF TV-12.jpg" },
+    { title: "Finding Purpose After Loss", tag: "Reflections", color: "bg-pink-500", image: src="image/DAF TV-2.jpg" },
+    { title: "Islam and Mental Health", tag: "Teachings", color: "bg-blue-500", image: src="image/DAF TV-7.jpg" },
+    { title: "The Encounter 2025 Highlights", tag: "Documentary", color: "bg-purple-main", image: src="image/DAF TV-12.jpg" },
+    { title: "Finding Purpose Part 2", tag: "Reflections", color: "bg-pink-500", image: src="image/DAF TV-5.jpg" },
+    { title: "The Encounter 2025 - Full", tag: "Documentary", color: "bg-purple-dark", image: src="image/DAF TV-2.jpg" },
+    { title: "Street Answers: Marriage", tag: "Street Interviews", color: "bg-purple-main", image: src="image/DAF TV-12.jpg" },
+    { title: "Mental Health Q&A", tag: "Teachings", color: "bg-blue-500", image: src="image/DAF TV-5.jpg" }
+];
+
+videos.forEach(v => {
+    document.write(`
+        <div class="group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl mb-4 h-48 bg-gray-200">
+                <img src="${v.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute top-3 left-3 ${v.color} text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">${v.tag}</span>
+            </div>
+            <h4 class="font-bold text-sm leading-tight group-hover:purple-main transition">${v.title}</h4>
+            <div class="flex gap-4 text-[10px] text-gray-400 mt-2">
+                <span><i class="fa-solid fa-eye mr-1"></i>4.2k</span>
+                <span><i class="fa-regular fa-clock mr-1"></i>12:45</span>
+            </div>
+        </div>
+    `);
+});
+</script>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY: MOMENTS THAT MATTER -->
+    <section class="py-24 container mx-auto px-8">
+        <div class="text-center mb-16">
+            <span class="purple-main font-bold uppercase tracking-widest text-xs">Gallery</span>
+            <h2 class="text-4xl font-bold mt-2">Moments That Matter</h2>
+            <p class="text-gray-500 mt-2">Behind the scenes, on the streets, and at the heart of the movement.</p>
+        </div>
+        
+        <!-- Masonry-style Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+            <div class="col-span-2 row-span-2 rounded-3xl overflow-hidden">
+                <img src="image/DAF TV-11.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-3xl overflow-hidden">
+                <img src="image/DAF TV-1.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-3xl overflow-hidden">
+                <img src="image/DAF TV-17.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-3xl overflow-hidden grayscale">
+                <img src="image/DAF TV-11.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-3xl overflow-hidden">
+                <img src="image/DAF TV-7.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="col-span-2 rounded-3xl overflow-hidden">
+                <img src="image/DAF TV-2.jpg" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- PURPLE CTA -->
+    <section class="container mx-auto px-8 py-16">
+        <div class="bg-purple-dark rounded-[3rem] p-16 text-center text-white relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold mb-6">Want to experience it live?</h2>
+                <p class="mb-8 opacity-80">Don't watch from the sidelines. Join our next event and be part of the conversation.</p>
+                <button class="bg-yellow-400 text-black px-8 py-3 rounded-xl font-bold hover:bg-yellow-500 transition">View upcoming events →</button>
+            </div>
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Matching index.html) -->
+    <footer class="bg-zinc-950 text-white pt-20 pb-10">
+        <div class="container mx-auto px-8 grid md:grid-cols-4 gap-12 border-b border-zinc-800 pb-12">
+            <div class="col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-purple-main rounded-full"></div>
+                    <span class="font-bold text-xl">DFA</span>
+                </div>
+                <p class="text-gray-400 max-w-sm">Faith. Culture. Real Conversations.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Newsletter</h4>
+                <div class="flex gap-2">
+                    <input type="text" class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl w-full">
+                    <button class="bg-yellow-400 text-black px-4 py-2 rounded-xl font-bold">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 mt-8">© 2026 DFA. All rights reserved.</div>
+    </footer>
+
+</body>
+</html>

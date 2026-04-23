@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFA | The Encounter Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .purple-main { color: #8B5CF6; }
+        .bg-purple-main { background-color: #8B5CF6; }
+        .bg-purple-soft { background-color: #F5F3FF; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- NAVIGATION -->
+    <nav class="flex items-center justify-between px-8 py-4 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-purple-main rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-xs">DFA</span>
+            </div>
+            <span class="font-bold text-xl tracking-tight">DFA</span>
+        </div>
+        <div class="hidden md:flex gap-8 font-medium text-sm">
+            <a href="home.html" class="hover:purple-main transition">Home</a>
+            <a href="media.html" class="hover:purple-main transition">Media</a>
+            <a href="event.html" class="purple-main">Events</a>
+            <a href="#" class="hover:purple-main transition">Contact</a>
+        </div>
+        <button class="bg-purple-main text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+            Get Tickets →
+        </button>
+    </nav>
+
+    <!-- EVENT HEADER / COUNTDOWN -->
+    <section class="relative h-[45vh] flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="image/DAF TV-2.jpg" alt="Event Banner" class="w-full h-full object-cover brightness-[0.4]">
+        </div>
+        <div class="container mx-auto px-8 relative z-10 pb-12 text-white">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div>
+                    <a href="events.html" class="text-xs uppercase font-bold opacity-80 hover:opacity-100 mb-4 inline-block">← Back to events</a>
+                    <span class="block bg-yellow-400 text-black text-[10px] font-bold px-3 py-1 rounded-full w-fit uppercase mb-4">Premium</span>
+                    <h1 class="text-5xl font-bold mb-2">The Encounter</h1>
+                    <p class="text-gray-300">A Night of Real Conversations</p>
+                </div>
+                <!-- Countdown -->
+                <div class="flex gap-4">
+                    <div class="text-center">
+                        <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 w-16 h-16 flex flex-col justify-center">
+                            <span class="text-xl font-bold">28</span>
+                        </div>
+                        <span class="text-[10px] uppercase mt-1 block">Days</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 w-16 h-16 flex flex-col justify-center">
+                            <span class="text-xl font-bold">03</span>
+                        </div>
+                        <span class="text-[10px] uppercase mt-1 block">Hrs</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 w-16 h-16 flex flex-col justify-center">
+                            <span class="text-xl font-bold">41</span>
+                        </div>
+                        <span class="text-[10px] uppercase mt-1 block">Mins</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT & SIDEBAR -->
+    <main class="container mx-auto px-8 py-16 grid md:grid-cols-3 gap-12">
+        
+        <!-- Left Content -->
+        <div class="md:col-span-2">
+            <h2 class="text-2xl font-bold mb-6">About This Event</h2>
+            <p class="text-gray-600 leading-relaxed mb-10">
+                This is more than an event — it's a moment of encounter. Join us as we have real conversations, connect deeply, and grow in faith together. Featuring live discussions, spoken word, and an atmosphere that stays with you long after the night ends.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+                <div class="bg-purple-soft p-6 rounded-2xl">
+                    <i class="fa-regular fa-calendar purple-main text-xl mb-4"></i>
+                    <p class="text-xs text-gray-500 uppercase font-bold">Date</p>
+                    <p class="font-bold">May 17, 2026</p>
+                </div>
+                <div class="bg-purple-soft p-6 rounded-2xl">
+                    <i class="fa-regular fa-clock purple-main text-xl mb-4"></i>
+                    <p class="text-xs text-gray-500 uppercase font-bold">Time</p>
+                    <p class="font-bold">4:00PM - 9:00PM</p>
+                </div>
+                <div class="bg-purple-soft p-6 rounded-2xl">
+                    <i class="fa-solid fa-location-dot purple-main text-xl mb-4"></i>
+                    <p class="text-xs text-gray-500 uppercase font-bold">Location</p>
+                    <p class="font-bold">The Grand Hall, Lagos</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-6">Event Gallery</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-100 rounded-3xl h-64 overflow-hidden">
+                    <img src="image/DAF TV-11.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-gray-100 rounded-3xl h-64 overflow-hidden">
+                    <img src="image/DAF TV-5.jpg" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Ticket Sidebar -->
+        <div class="md:col-span-1">
+            <div class="bg-white border border-gray-100 rounded-[2rem] p-8 shadow-sm sticky top-24">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-ticket purple-main"></i> Get Your Ticket
+                </h3>
+                
+                <div class="space-y-6">
+                    <!-- Standard -->
+                    <div class="border-b border-gray-100 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold">Standard</span>
+                            <span class="purple-main font-bold">₦5,000</span>
+                        </div>
+                        <ul class="text-xs text-gray-500 space-y-1 mb-4">
+                            <li>• General Admission</li>
+                            <li>• Event Materials</li>
+                            <li>• Light Refereshments</li>
+                        </ul>
+                        <button onclick="window.location.href='event-registration.html'" class="w-full py-2 border border-purple-main purple-main rounded-xl text-sm font-bold hover:bg-purple-main hover:text-white transition">Select</button>
+                    </div>
+
+                    <!-- VIP -->
+                    <div class="border-b border-gray-100 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold">VIP</span>
+                            <span class="purple-main font-bold">₦15,000</span>
+                        </div>
+                        <ul class="text-xs text-gray-500 space-y-1 mb-4">
+                            <li>• Front Row Seating</li>
+                            <li>• Exclusive Meet & Greet</li>
+                            <li>• Full dinner</li>
+                        </ul>
+                        <button onclick="window.location.href='event-registration.html'" class="w-full py-2 border border-purple-main purple-main rounded-xl text-sm font-bold hover:bg-purple-main hover:text-white transition">Select</button>
+                    </div>
+
+                    <!-- Group/School -->
+                    <div class="border-b border-gray-100 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold">Group Pass</span>
+                            <span class="purple-main font-bold">₦20,000</span>
+                        </div>
+                        <ul class="text-xs text-gray-500 space-y-1 mb-4">
+                            <li>• General Admission</li>
+                            <li>• Event Materials</li>
+                            <li>• Light Refereshments</li>
+                        </ul>
+                        <button onclick="window.location.href='event-registration.html'" class="w-full py-2 border border-purple-main purple-main rounded-xl text-sm font-bold hover:bg-purple-main hover:text-white transition">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- MORE EVENTS (Mini version) -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-8">
+            <h2 class="text-2xl font-bold mb-8 text-center">More Events</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Reusable card style from previous page -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 flex gap-6 items-center">
+                    <div class="w-32 h-32 bg-gray-200 rounded-2xl flex-shrink-0"></div>
+                    <div>
+                        <h4 class="font-bold">Ramadan Reflections</h4>
+                        <p class="text-xs text-gray-400 mb-2">March 12, 2026</p>
+                        <a href="#" class="purple-main text-xs font-bold">See details →</a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 flex gap-6 items-center">
+                    <div class="w-32 h-32 bg-gray-200 rounded-2xl flex-shrink-0"></div>
+                    <div>
+                        <h4 class="font-bold">DFA Annual Conference</h4>
+                        <p class="text-xs text-gray-400 mb-2">Feb 20, 2026</p>
+                        <a href="#" class="purple-main text-xs font-bold">See details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 text-white pt-20 pb-10">
+        <div class="text-center text-xs text-gray-500">© 2026 DFA. All rights reserved.</div>
+    </footer>
+
+</body>
+</html>

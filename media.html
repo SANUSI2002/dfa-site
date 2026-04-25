@@ -17,24 +17,61 @@
 </head>
 <body class="bg-white text-gray-900">
 
-    <!-- NAVIGATION -->
-    <nav class="flex items-center justify-between px-8 py-4 bg-white sticky top-0 z-50 shadow-sm">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-purple-main rounded-full flex items-center justify-center">
-                <span class="text-white font-bold text-xs">DFA</span>
+<!-- NAVIGATION -->
+    <nav class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center justify-between px-8 py-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-purple-main rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">DFA</span>
+                </div>
+                <span class="font-bold text-xl tracking-tight">DFA</span>
             </div>
-            <span class="font-bold text-xl tracking-tight">DFA</span>
+
+            <!-- Desktop Menu (Hidden on Mobile) -->
+            <div class="hidden md:flex gap-8 font-medium text-sm">
+                <a href="index.html" class="purple-main">Home</a>
+                <a href="media.html" class="hover:purple-main transition">Media</a>
+                <a href="event.html" class="hover:purple-main transition">Events</a>
+                <a href="#" class="hover:purple-main transition">Contact</a>
+            </div>
+
+            <!-- Get Tickets Button (Desktop) -->
+            <div class="hidden md:block">
+                <a href="event_details.html">
+                    <button class="bg-purple-main text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+                        Get Tickets →
+                    </button>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button (Hidden on Desktop) -->
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
         </div>
-        <div class="hidden md:flex gap-8 font-medium text-sm">
-            <a href="index.html" class="hover:purple-main transition">Home</a>
-            <a href="media.html" class="purple-main">Media</a>
-            <a href="event.html" class="hover:purple-main transition">Events</a>
-            <a href="#" class="hover:purple-main transition">Contact</a>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-8 py-6 space-y-4 shadow-lg">
+            <a href="index.html" class="block font-medium purple-main">Home</a>
+            <a href="media.html" class="block font-medium hover:purple-main">Media</a>
+            <a href="event.html" class="block font-medium hover:purple-main">Events</a>
+            <a href="#" class="block font-medium hover:purple-main">Contact</a>
+            <a href="event_details.html" class="block">
+                <button class="w-full bg-purple-main text-white py-3 rounded-xl font-semibold">Get Tickets →</button>
+            </a>
         </div>
-        <button class="bg-purple-main text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
-            Get Tickets →
-        </button>
     </nav>
+
+    <!-- Script to toggle Mobile Menu -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- MEDIA HERO -->
     <section class="relative h-[60vh] flex items-center overflow-hidden">

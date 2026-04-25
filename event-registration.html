@@ -17,20 +17,61 @@
 </head>
 <body class="text-gray-900">
 
-    <!-- NAVIGATION -->
-    <nav class="flex items-center justify-between px-12 py-6 bg-white">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-purple-main rounded-full flex items-center justify-center text-white font-bold text-xs">DFA</div>
-            <span class="font-bold text-xl tracking-tight">DFA</span>
+ <!-- NAVIGATION -->
+    <nav class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center justify-between px-8 py-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-purple-main rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">DFA</span>
+                </div>
+                <span class="font-bold text-xl tracking-tight">DFA</span>
+            </div>
+
+            <!-- Desktop Menu (Hidden on Mobile) -->
+            <div class="hidden md:flex gap-8 font-medium text-sm">
+                <a href="index.html" class="purple-main">Home</a>
+                <a href="media.html" class="hover:purple-main transition">Media</a>
+                <a href="event.html" class="hover:purple-main transition">Events</a>
+                <a href="#" class="hover:purple-main transition">Contact</a>
+            </div>
+
+            <!-- Get Tickets Button (Desktop) -->
+            <div class="hidden md:block">
+                <a href="event_details.html">
+                    <button class="bg-purple-main text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+                        Get Tickets →
+                    </button>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button (Hidden on Desktop) -->
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
         </div>
-        <div class="hidden md:flex gap-8 font-medium text-xs text-gray-600">
-            <a href="index.html">Home</a>
-            <a href="media.html">Media</a>
-            <a href="event.html">Events</a>
-            <a href="#">Contact</a>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-8 py-6 space-y-4 shadow-lg">
+            <a href="index.html" class="block font-medium purple-main">Home</a>
+            <a href="media.html" class="block font-medium hover:purple-main">Media</a>
+            <a href="event.html" class="block font-medium hover:purple-main">Events</a>
+            <a href="#" class="block font-medium hover:purple-main">Contact</a>
+            <a href="event_details.html" class="block">
+                <button class="w-full bg-purple-main text-white py-3 rounded-xl font-semibold">Get Tickets →</button>
+            </a>
         </div>
-        <button class="bg-purple-main text-white px-6 py-2 rounded-full text-xs font-bold">Get Tickets →</button>
     </nav>
+
+    <!-- Script to toggle Mobile Menu -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <main class="max-w-4xl mx-auto py-12 px-6">
         <!-- HEADER & STEPPER -->

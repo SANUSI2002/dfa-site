@@ -17,110 +17,127 @@
 <body class="bg-white text-gray-900">
 
    <!-- NAVIGATION -->
-    <nav class="bg-white sticky top-0 z-50 shadow-sm">
-        <div class="flex items-center justify-between px-8 py-4">
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-purple-main rounded-full flex items-center justify-center">
-                    <span class="text-white font-bold text-xs">DFA</span>
-                </div>
-                <span class="font-bold text-xl tracking-tight">DFA</span>
+<nav class="bg-white sticky top-0 z-50 shadow-sm">
+    <div class="flex items-center justify-between px-8 py-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-purple-main rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-xs">DFA</span>
             </div>
-
-            <!-- Desktop Menu (Hidden on Mobile) -->
-            <div class="hidden md:flex gap-8 font-medium text-sm">
-                <a href="index.html" class="purple-main">Home</a>
-                <a href="media.html" class="hover:purple-main transition">Media</a>
-                <a href="event.html" class="hover:purple-main transition">Events</a>
-                <a href="#" class="hover:purple-main transition">Contact</a>
-            </div>
-
-            <!-- Get Tickets Button (Desktop) -->
-            <div class="hidden md:block">
-                <a href="event_details.html">
-                    <button class="bg-purple-main text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
-                        Get Tickets →
-                    </button>
-                </a>
-            </div>
-
-            <!-- Mobile Menu Button (Hidden on Desktop) -->
-            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
+            <span class="font-bold text-xl tracking-tight">DFA</span>
         </div>
-
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-8 py-6 space-y-4 shadow-lg">
-            <a href="index.html" class="block font-medium purple-main">Home</a>
-            <a href="media.html" class="block font-medium hover:purple-main">Media</a>
-            <a href="event.html" class="block font-medium hover:purple-main">Events</a>
-            <a href="#" class="block font-medium hover:purple-main">Contact</a>
-            <a href="event_details.html" class="block">
-                <button class="w-full bg-purple-main text-white py-3 rounded-xl font-semibold">Get Tickets →</button>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 font-medium text-sm ml-auto mr-8">
+            <a href="index.html" class="text-purple-main">Home</a>
+            <a href="media.html" class="hover:text-purple-600 transition">Media</a>
+            <a href="event.html" class="hover:text-purple-600 transition">Events</a>
+            <a href="#" class="hover:text-purple-600 transition">Contact</a>
+        </div>
+        <!-- Get Tickets Button (Desktop) -->
+        <div class="hidden md:block">
+            <a href="event_details.html">
+                <button class="bg-purple-main text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+                    Get Tickets →
+                </button>
             </a>
         </div>
-    </nav>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-8 py-6 space-y-4 shadow-lg">
+        <a href="index.html" class="block font-medium text-purple-main">Home</a>
+        <a href="media.html" class="block font-medium hover:text-purple-600">Media</a>
+        <a href="event.html" class="block font-medium hover:text-purple-600">Events</a>
+        <a href="#" class="block font-medium hover:text-purple-600">Contact</a>
+        <a href="event_details.html" class="block">
+            <button class="w-full bg-purple-main text-white py-3 rounded-xl font-semibold">Get Tickets →</button>
+        </a>
+    </div>
+</nav>
 
-    <!-- Script to toggle Mobile Menu -->
-    <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
+<!-- Script to toggle Mobile Menu -->
+<script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
-
-    <!-- HERO SECTION -->
-    <section class="relative h-[85vh] flex items-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="image/DAF TV-12.jpg" alt="Hero" class="w-full h-full object-cover brightness-50">
+<!-- HERO SECTION -->
+<section class="relative h-[85vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="image/DAF TV-12.jpg" alt="Hero" class="w-full h-full object-cover brightness-50">
+    </div>
+    <div class="container mx-auto px-8 relative z-10 text-white">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-white/30" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
+            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+            <span class="text-sm font-medium">New Content every week</span>
         </div>
-        <div class="container mx-auto px-8 relative z-10 text-white">
-            <h1 class="text-6xl font-bold leading-tight mb-4">Faith.<br>Culture.<br>Real Conversations.</h1>
-            <p class="max-w-lg text-gray-200 mb-8">We bring Deen into everyday conversations—raw, real, and relevant.</p>
-            <div class="flex gap-4">
-                <a href="media.html">
-    <button class="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold hover:bg-yellow-500 transition">
-        Watch Content
-    </button>
-</a>
-                <a href="event.html">
-    <button class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-black transition">
-        Explore Event
-    </button>
-</a>
-            </div>
+        <h1 class="text-6xl font-bold leading-tight mb-4">
+            Faith.<br>
+            <span class="text-yellow-400">Culture.</span><br>
+            Real Conversations.
+        </h1>
+        <p class="max-w-lg text-gray-200 mb-8">We bring Deen into everyday conversations — raw, real, and relevant.</p>
+        <div class="flex gap-4 flex-wrap">
+            <a href="media.html">
+                <button class="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold hover:bg-yellow-500 transition flex items-center gap-2">
+                    ▶ Watch Content
+                </button>
+            </a>
+            <a href="event.html">
+                <button style="
+                    background: rgba(255,255,255,0.15);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255,255,255,0.4);
+                    color: white;
+                    padding: 12px 32px;
+                    border-radius: 9999px;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                "
+                onmouseover="this.style.background='rgba(255,255,255,0.25)'"
+                onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+                    Explore Event →
+                </button>
+            </a>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- MOVEMENT STATS -->
     <section class="py-24 container mx-auto px-8">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <span class="purple-main font-bold uppercase tracking-widest text-xs">Our Movement</span>
-                <h2 class="text-4xl font-bold mt-4 mb-6 leading-tight">DFA is more than content,<br>it's a <span class="italic purple-main underline">movement.</span></h2>
-                <p class="text-gray-600 mb-10 text-lg">We engage people where they are, ask the real questions, and bring truth that transforms lives Through conversations, street interviews, teachings, and events, DFA addresses real-life issues from an Islamic perspective, helping young people navigate life, identity, purpose, and faith with honesty and depth</p>
-                <div class="grid grid-cols-3 gap-4">
-                    <div><p class="text-3xl font-bold purple-main">260k+</p><p class="text-sm text-gray-500">Views across platforms</p></div>
-                    <div><p class="text-3xl font-bold purple-main">1K+</p><p class="text-sm text-gray-500">Videos published</p></div>
-                    <div><p class="text-3xl font-bold purple-main">800+</p><p class="text-sm text-gray-500">Community members</p></div>
-                </div>
-            </div>
+    <span class="inline-block border border-purple-400 text-purple-600 bg-purple-50 font-semibold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full">WHO ARE WE</span>
+    <h2 class="text-4xl font-bold mt-4 mb-6 leading-tight">DFA is more than content,<br>it's a <span class="purple-main underline">movement.</span></h2>
+    <p class="text-gray-600 mb-10 text-lg">We engage people where they are, ask the real questions, and bring truth that transforms lives Through conversations, street interviews, teachings, and events, DFA addresses real-life issues from an Islamic perspective, helping young people navigate life, identity, purpose, and faith with honesty and depth</p>
+    <div class="grid grid-cols-3 gap-4">
+        <div><p class="text-3xl font-bold purple-main">260k+</p><p class="text-sm text-gray-500">Views across platforms</p></div>
+        <div><p class="text-3xl font-bold purple-main">1K+</p><p class="text-sm text-gray-500">Videos published</p></div>
+        <div><p class="text-3xl font-bold purple-main">800+</p><p class="text-sm text-gray-500">Community members</p></div>
+    </div>
+</div>
             <div class="relative">
                 <img src="image/DAF TV-2.jpg" class="rounded-3xl shadow-2xl" alt="Community">
                 <div class="absolute -bottom-6 -left-6 bg-yellow-400 p-8 rounded-2xl hidden md:block shadow-lg">
-                    <p class="font-bold text-xl text-black">Join our<br>community today</p>
+                    <p class="font-bold text-xl text-black">Snice 2024<br>Building a movement</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CONTENT GRID (What We Do) -->
-   <section class="bg-gray-50 py-24"> 
+<section class="bg-gray-50 py-24"> 
     <div class="container mx-auto px-8 text-center mb-16">
-        <span class="purple-main font-bold uppercase tracking-widest text-xs">What we do</span>
+        <span class="inline-block border border-amber-400 text-amber-600 bg-amber-50 font-semibold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full">What we do</span>
         <h2 class="text-4xl font-bold mt-4">Content That Connects</h2>
     </div>
 
@@ -133,7 +150,7 @@
             </div>
             <h3 class="text-xl font-bold mb-4">Media Content</h3>
             <p class="text-gray-600 leading-relaxed">
-                Powerful video content that meets people where they are. From deep conversations to quick reflections  made for the feed, felt in the heart.
+                Powerful video content that meets people where they are. From deep conversations to quick reflections made for the feed, felt in the heart.
             </p>
         </div>
 
@@ -155,7 +172,7 @@
             </div>
             <h3 class="text-xl font-bold mb-4">Events & Gatherings</h3>
             <p class="text-gray-600 leading-relaxed">
-                From intimate circles to large-scale conferences  our events create spaces where faith, culture, and community collide in the best way.
+                From intimate circles to large-scale conferences our events create spaces where faith, culture, and community collide in the best way.
             </p>
         </div>
 
@@ -172,101 +189,119 @@
 
     </div>
 </section>
-
     
 
-    <!-- OUR LATEST CONNECTIONS (NEW SECTION) -->
-    <section class="py-24 container mx-auto px-8">
-        <div class="flex justify-between items-end mb-12">
-            <div>
-                <span class="purple-main font-bold uppercase tracking-widest text-xs">Stay Updated</span>
-                <h2 class="text-4xl font-bold mt-2">Our Latest Connections</h2>
-            </div>
-            <a href="media.html" class="text-sm font-bold purple-main hover:underline">View all media →</a>
-        </div>
-        <div class="grid md:grid-cols-4 gap-6">
-            <!-- Card 1 -->
-            <div class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl mb-4">
-                    <img src="image/DAF TV-7.jpg" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-3 left-3 bg-purple-main text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Street Interviews</span>
-                </div>
-                <h4 class="font-bold group-hover:purple-main transition">Does God Really Exist? — Street Answers</h4>
-                <p class="text-xs text-gray-400 mt-2">12 Oct 2025 • 15:20</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl mb-4">
-                    <img src="image/DAF TV-1.jpg" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-3 left-3 bg-purple-main text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Reflections</span>
-                </div>
-                <h4 class="font-bold group-hover:purple-main transition">Finding Purpose After Losing Everything</h4>
-                <p class="text-xs text-gray-400 mt-2">08 Oct 2025 • 10:45</p>
-            </div>
-            <!-- Repeat for 3 & 4 as per Screenshot 2026-04-21 101952.png -->
-            <div class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl mb-4">
-                    <img src="image/DAF TV-2.jpg" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-3 left-3 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Mental Health</span>
-                </div>
-                <h4 class="font-bold group-hover:purple-main transition">What Islam Actually Says About Mental Health</h4>
-                <p class="text-xs text-gray-400 mt-2">01 Oct 2025 • 12:00</p>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-2xl mb-4">
-                    <img src="image/DAF TV-5.jpg" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
-                    <span class="absolute top-3 left-3 bg-pink-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Events</span>
-                </div>
-                <h4 class="font-bold group-hover:purple-main transition">The Encounter 2025 — Full Highlights</h4>
-                <p class="text-xs text-gray-400 mt-2">25 Sep 2025 • 45:10</p>
-            </div>
-        </div>
-    </section>
+   <!-- OUR LATEST CONNECTIONS (NEW SECTION) -->
+<section class="py-24 container mx-auto px-8">
+    <div class="text-center mb-12">
+        <span class="inline-block border border-amber-400 text-amber-600 bg-amber-50 font-semibold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full">Watch & Reflect</span>
+        <h2 class="text-4xl font-bold mt-4">Our Latest Conversations</h2>
+        <p class="text-gray-500 mt-3 text-sm">Dive into real stories, street interviews, and teachings that stay with you.</p>
+    </div>
 
-    <!-- UPCOMING EVENTS (NEW SECTION) -->
-    <section class="py-24 bg-gray-50">
-        <div class="container mx-auto px-8">
-            <div class="text-center mb-16">
-                <span class="purple-main font-bold uppercase tracking-widest text-xs">Get Involved</span>
-                <h2 class="text-4xl font-bold mt-2">Upcoming Events</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl mb-4">
+                <img src="image/DAF TV-7.jpg" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Street Interviews</span>
             </div>
-            <div class="max-w-4xl mx-auto space-y-6">
-                <!-- Event 1 -->
-                <div class="bg-white p-6 rounded-3xl flex flex-col md:flex-row gap-8 items-center border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80" class="w-full md:w-64 h-40 object-cover rounded-2xl">
-                    <div class="flex-1">
-                        <div class="flex gap-2 mb-2">
-                            <span class="bg-yellow-100 text-yellow-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Premium</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">The Encounter</h3>
-                        <p class="text-sm text-gray-500 mb-4 flex items-center gap-4">
-                            <span><i class="fa-regular fa-calendar mr-2"></i>May 17, 2026</span>
-                            <span><i class="fa-solid fa-location-dot mr-2"></i>The Grand Hall, Lagos</span>
-                        </p>
-                        <a href="event-details.html" class="purple-main font-bold text-sm hover:underline">See Details →</a>
-                    </div>
-                </div>
-                <!-- Event 2 -->
-                <div class="bg-white p-6 rounded-3xl flex flex-col md:flex-row gap-8 items-center border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?auto=format&fit=crop&q=80" class="w-full md:w-64 h-40 object-cover rounded-2xl">
-                    <div class="flex-1">
-                        <div class="flex gap-2 mb-2">
-                            <span class="bg-purple-100 purple-main text-[10px] font-bold px-2 py-1 rounded uppercase">Free Event</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Ramadan Reflections Live</h3>
-                        <p class="text-sm text-gray-500 mb-4 flex items-center gap-4">
-                            <span><i class="fa-regular fa-calendar mr-2"></i>March 12, 2026</span>
-                            <span><i class="fa-solid fa-location-dot mr-2"></i>Online / Zoom</span>
-                        </p>
-                        <a href="#" class="purple-main font-bold text-sm hover:underline">See Details →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="events.html" class="purple-main font-bold hover:underline">View all events →</a>
+            <h4 class="font-bold group-hover:text-purple-600 transition">Does God Really Exist? — Street Answers</h4>
+            <div class="flex items-center gap-4 mt-2 text-xs text-gray-400">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-eye"></i> 142k</span>
+                <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 8:24</span>
             </div>
         </div>
-    </section>
+
+        <!-- Card 2 -->
+        <div class="group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl mb-4">
+                <img src="image/DAF TV-1.jpg" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Reflections</span>
+            </div>
+            <h4 class="font-bold group-hover:text-purple-600 transition">Finding Purpose After Losing Everything</h4>
+            <div class="flex items-center gap-4 mt-2 text-xs text-gray-400">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-eye"></i> 142k</span>
+                <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 8:24</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl mb-4">
+                <img src="image/DAF TV-2.jpg" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute top-3 left-3 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Teachings</span>
+            </div>
+            <h4 class="font-bold group-hover:text-purple-600 transition">What Islam Actually Says About Mental Health</h4>
+            <div class="flex items-center gap-4 mt-2 text-xs text-gray-400">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-eye"></i> 142k</span>
+                <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 8:24</span>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl mb-4">
+                <img src="image/DAF TV-5.jpg" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute top-3 left-3 bg-pink-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Event Moment</span>
+            </div>
+            <h4 class="font-bold group-hover:text-purple-600 transition">The Encounter 2025 — Full Highlights</h4>
+            <div class="flex items-center gap-4 mt-2 text-xs text-gray-400">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-eye"></i> 142k</span>
+                <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 8:24</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Centered Button -->
+    <div class="text-center mt-12">
+        <a href="media.html" class="inline-block border border-purple-600 text-purple-600 font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-purple-600 hover:text-white transition">View All contents →</a>
+    </div>
+</section>
+   <!-- UPCOMING EVENTS (NEW SECTION) -->
+<section class="py-24 bg-gray-50">
+    <div class="container mx-auto px-8">
+        <div class="text-center mb-16">
+            <span class="inline-block border border-amber-400 text-amber-600 bg-amber-50 font-semibold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full">Get Involved</span>
+            <h2 class="text-4xl font-bold mt-4">Upcoming Events</h2>
+        </div>
+        <div class="max-w-4xl mx-auto space-y-6">
+            <!-- Event 1 -->
+            <div class="bg-white p-6 rounded-3xl flex flex-col md:flex-row gap-8 items-center border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80" class="w-full md:w-64 h-40 object-cover rounded-2xl">
+                <div class="flex-1">
+                    <div class="flex gap-2 mb-2">
+                        <span class="bg-yellow-100 text-yellow-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Premium</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">The Encounter</h3>
+                    <p class="text-sm text-gray-500 mb-4 flex items-center gap-4">
+                        <span><i class="fa-regular fa-calendar mr-2"></i>May 17, 2026</span>
+                        <span><i class="fa-solid fa-location-dot mr-2"></i>The Grand Hall, Lagos</span>
+                    </p>
+                    <a href="event-details.html" class="purple-main font-bold text-sm hover:underline">See Details →</a>
+                </div>
+            </div>
+            <!-- Event 2 -->
+            <div class="bg-white p-6 rounded-3xl flex flex-col md:flex-row gap-8 items-center border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?auto=format&fit=crop&q=80" class="w-full md:w-64 h-40 object-cover rounded-2xl">
+                <div class="flex-1">
+                    <div class="flex gap-2 mb-2">
+                        <span class="bg-purple-100 purple-main text-[10px] font-bold px-2 py-1 rounded uppercase">Free Event</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ramadan Reflections Live</h3>
+                    <p class="text-sm text-gray-500 mb-4 flex items-center gap-4">
+                        <span><i class="fa-regular fa-calendar mr-2"></i>March 12, 2026</span>
+                        <span><i class="fa-solid fa-location-dot mr-2"></i>Online / Zoom</span>
+                    </p>
+                    <a href="#" class="purple-main font-bold text-sm hover:underline">See Details →</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="events.html" class="purple-main font-bold hover:underline">View all events →</a>
+        </div>
+    </div>
+</section>
 
     <!-- CTA BANNER -->
     <section class="container mx-auto px-8 py-16">
